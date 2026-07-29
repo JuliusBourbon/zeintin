@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Zeintin</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/vogue" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#7F1517',
+                            dark: '#110202', // Very dark tinted red/black
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+        @import url('https://fonts.cdnfonts.com/css/vogue');
+
+        * {
+            font-family: 'Gilroy-Regular', sans-serif;
+        }
+
+        .gbold {
+            font-family: 'Gilroy-Bold', sans-serif;
+        }
+
+        .gheavy {
+            font-family: 'Gilroy-Heavy', sans-serif;
+        }
+
+        .glight {
+            font-family: 'Gilroy-Light', sans-serif;
+        }
+
+        .gmed {
+            font-family: 'Gilroy-Medium', sans-serif;
+        }
+
+        .vogue {
+            font-family: 'Vogue', sans-serif;
+        }
+
+        .hero-bg {
+            background-color: #7F1517;
+        }
+
+        @font-face {
+            font-family: 'Gilroy-ExtraBold';
+            src: url('./assets/fonts/Gilroy-ExtraBold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .gilroyExtraBold {
+            font-family: 'Gilroy-ExtraBold', sans-serif;
+        }
+
+        /* Dynamic Outline Utilities */
+        .text-outline-white {
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+        }
+
+        .text-outline-red {
+            color: transparent;
+            -webkit-text-stroke: 2px #F20000;
+        }
+
+        @media (max-width: 768px) {
+            .hero-mobile-bg {
+                background-image:
+                    linear-gradient(to bottom, rgba(127, 21, 23, 0.95) 0%, rgba(127, 21, 23, 0.8) 100%),
+                    url('assets/HOME1.png');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gradient-to-bl from-[#010101] to-brand-red text-white flex flex-col min-h-screen font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="w-full px-6 md:px-16 lg:px-24 py-8 flex justify-between items-center z-40 relative">
+        <a href="index.html" class="text-2xl md:text-3xl font-heading font-black italic tracking-wider">
+            <img src="assets/logo.png" alt="Zeintin Logo">
+        </a>
+        <div class="hidden md:flex gap-40 text-sm font-semibold mr-20">
+            <a href="index.html" class="hover:text-gray-300 text-lg transition-colors">Home</a>
+            <a href="tentang.html" class="hover:text-gray-300 text-lg transition-colors">Tentang</a>
+            <a href="produk.html" class="hover:text-gray-300 text-lg transition-colors">Produk</a>
+            <a href="kontak.html" class="hover:text-gray-300 text-lg transition-colors">Kontak</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none hover:text-gray-300">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow relative flex flex-col w-full">
+
+        <!-- Layer 1: Solid Text and Content -->
+        <div class="relative z-10 w-full h-fit mx-auto px-6 lg:px-24 grid grid-cols-1 lg:grid-cols-12">
+
+            <!-- Left offset (where the hero goes) -->
+            <div class="hidden lg:block lg:col-span-1"></div>
+
+            <!-- Right content -->
+            <div class="lg:col-span-11 flex flex-col justify-start">
+                <!-- Headings -->
+                <h4 class="text-[#F20000] gilroyExtraBold text-xl md:text-2xl uppercase select-none">
+                    Tentang Kami
+                </h4>
+                <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6rem] leading-[1] uppercase w-fit">
+                    <span class="text-white gilroyExtraBold">KAMI SIAP</span><br>
+                    <span class="text-white gilroyExtraBold">MEMBANTU ANDA</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Layer 2: Hero Image -->
+        <div class="flex justify-end pr-40">
+            <img src="assets/kontakHero.png"
+                class="absolute bottom-0 left-0 md:left-10 z-20 pointer-events-none w-auto max-h-[80vh] lg:max-h-[100vh] object-contain object-bottom"
+                alt="Kontak Hero">
+
+            <div class="lg:pl-10 flex flex-col items-start pt-20">
+                <h4 class="text-white text-xl md:text-2xl font-bold mb-8 tracking-widest uppercase gbold">
+                    INFORMASI KONTAK
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-4 gap-x-20 w-full max-w-4xl relative z-30">
+                    <!-- Item 1: Phone -->
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="w-12 h-12 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/phone.png" class="w-full h-full object-contain" alt="Phone">
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-1 gbold">
+                                TELEPON / WHATSAPP</p>
+                            <p class="text-white text-xs md:text-sm font-semibold">081210008739</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Email -->
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="w-12 h-12 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/mail.png" class="w-full h-full object-contain" alt="Mail">
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-1 gbold">
+                                EMAIL</p>
+                            <p class="text-white text-xs md:text-sm font-semibold">@zeintinonline.id</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Instagram -->
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="w-12 h-12 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/Instagram.png" class="w-full h-full object-contain" alt="Instagram">
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-1 gbold">
+                                INSTAGRAM</p>
+                            <p class="text-white text-xs md:text-sm font-semibold">@zeintin.official</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Waktu -->
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="w-12 h-12 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/waktu.png" class="w-[80%] h-[80%] object-contain" alt="Waktu">
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-1 gbold">JAM
+                                OPERASIONAL</p>
+                            <p class="text-white text-xs md:text-sm font-semibold">Senin - Minggu<br>09.00 - 21.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Facebook -->
+                    <div class="flex items-center gap-1 md:gap-2">
+                        <div class="w-12 h-12 md:w-20 md:h-20 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/Facebook.png" class="w-full h-full object-contain" alt="Facebook">
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-1 gbold">
+                                FACEBOOK</p>
+                            <p class="text-white text-xs md:text-sm font-semibold">@zeintinindonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layer 3: Outline Text -->
+        <div class="absolute inset-0 z-30 pointer-events-none flex flex-col" aria-hidden="true">
+            <div class="w-full mx-auto px-6 lg:px-24 grid grid-cols-1 lg:grid-cols-12 h-full flex-grow">
+                <!-- Left offset -->
+                <div class="hidden lg:block lg:col-span-1"></div>
+                <!-- Right content -->
+                <div class="lg:col-span-11 flex flex-col justify-start h-full">
+                    <h4 class="text-[#F20000] gilroyExtraBold text-xl md:text-2xl uppercase select-none">
+                        Tentang Kami
+                    </h4>
+                    <h1 class="text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[6rem] leading-[1] uppercase w-fit">
+                        <span class="text-outline-white gilroyExtraBold">KAMI SIAP</span><br>
+                        <span class="text-outline-white gilroyExtraBold">MEMBANTU ANDA</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lokasi Section -->
+    <section class="relative w-full py-16 md:py-24 bg-cover bg-center" style="background-image: url('assets/map.png');">
+        <!-- Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-transparent"></div>
+
+        <div class="relative z-10 w-full mx-auto px-6 lg:px-24 grid grid-cols-1 lg:grid-cols-12">
+            <div class="hidden lg:block lg:col-span-1"></div>
+            <div class="lg:col-span-11 flex flex-col justify-center">
+                <h4 class="text-white text-sm md:text-base font-bold mb-6 tracking-widest uppercase gbold">
+                    LOKASI KAMI
+                </h4>
+                <div class="flex items-center gap-6 max-w-md md:max-w-xl">
+                    <div class="flex-shrink-0">
+                        <img src="assets/location.png"
+                            class="w-12 h-12 md:w-16 md:h-16 object-contain bg-white rounded-full p-2" alt="Location">
+                    </div>
+                    <p class="text-white text-sm md:text-base font-semibold leading-relaxed">
+                        Jl. Ciputat Raya No. 4 Abc 9, RT.9/RW.8, Kby. Lama Utara, Kec. Kebayoran Lama, Kota Jakarta
+                        Selatan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-bl from-[#1F0100] via-[#3E0001] to-[#2E0001] px-6 md:px-16 lg:px-24 py-16 md:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-gray-800 pb-12">
+            <!-- Brand -->
+            <div class="md:col-span-5">
+                <h2 class="text-3xl md:text-4xl vogue font-heading uppercase mb-4">Zeintin
+                </h2>
+                <p class="text-lg font-medium leading-relaxed">Kualitas legend desain untuk
+                    selamanya</p>
+            </div>
+
+            <!-- Nav -->
+            <div class="md:col-span-3 lg:col-span-3">
+                <h3 class="gbold text-2xl md:text-3xl mb-6 uppercase">Navigasi</h3>
+                <ul class="space-y-4 text-lg text-white font-medium">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Beranda</a></li>
+                    <li><a href="tentang.html" class="hover:text-white transition-colors">Tentang</a></li>
+                    <li><a href="produk.html" class="hover:text-white transition-colors">Produk</a></li>
+                    <li><a href="kontak.html" class="hover:text-white transition-colors">Kontak</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="md:col-span-5 lg:col-span-4">
+                <h3 class="gbold text-2xl md:text-3xl mb-6 uppercase">Hubungi Kami</h3>
+                <ul class="text-lg text-white font-medium">
+                    <li class="flex items-center gap-4">
+                        <img src="assets/location.png" class="mt-1 w-10 text-white"></img>
+                        <span>Jl. Ciputat Raya No. 6 Jakarta selatan</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <img src="assets/phone.png" class="mt-1 w-10 text-white"></img>
+                        <span>+62 8121-0008-739</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <img src="assets/mail.png" class="mt-1 w-10 text-white"></img>
+                        <span>@zeintinonline.id</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <img src="assets/waktu.png" class="mt-1 w-10 text-white"></img>
+                        <span>Senin - Minggu<br>09.00 - 21.00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pt-12">
+            <p class="text-base md:col-span-6 lg:col-span-6">@2024 Zeintin. Semua hak dilindungi</p>
+            <div class="md:col-span-5 lg:col-span-3">
+                <a href="#" class="hover:text-gray-300 transition-colors">Kebijakan Privasi</a>
+            </div>
+            <div class="md:col-span-5 lg:col-span-3">
+                <a href="#" class="hover:text-gray-300 transition-colors">Metode Pembayaran</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
