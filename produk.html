@@ -85,12 +85,12 @@
     <main class="flex-grow flex items-center justify-center relative w-full pt-10 pb-20">
         <!-- Hand Image -->
         <img src="assets/hand.png"
-            class="absolute bottom-0 left-[25%] transform -translate-x-1/2 w-[10%] md:w-[10%] lg:w-[30%] z-10"
+            class="hidden md:block absolute bottom-0 left-[25%] transform -translate-x-1/2 w-[10%] md:w-[10%] lg:w-[30%] z-10"
             alt="Hand holding shoe">
         <div class="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 lg:px-16 items-center">
 
             <!-- Left Side: Hand, Shoe, Layered Text -->
-            <div class="relative flex flex-col justify-center items-center h-[500px] lg:h-[700px] w-full">
+            <div class="hidden md:flex relative flex-col justify-center items-center h-[500px] lg:h-[700px] w-full">
                 <!-- LAYER 1: (Solid White) -->
                 <h1 class="text-7xl md:text-8xl lg:text-[12rem] tracking-wide w-fit relative z-10">
                     <span class="text-white gilroyExtraBold">PR</span><br>
@@ -104,7 +104,7 @@
                     alt="Product Shoe">
 
                 <!-- LAYER 3: (Outline text overlapping the shoe) -->
-                <div class="absolute inset-0 flex flex-col justify-center items-center z-30 pointer-events-none"
+                <div class="hidden md:flex absolute inset-0 flex-col justify-center items-center z-30 pointer-events-none"
                     aria-hidden="true">
                     <h1 class="text-7xl md:text-8xl lg:text-[12rem] tracking-wide w-fit">
                         <span class="text-outline-white gilroyExtraBold">PR</span><br>
@@ -133,7 +133,7 @@
 
                     <div class="text-center w-full mt-8">
                         <p id="productText"
-                            class="text-white font-bold text-sm md:text-base mb-8 px-2 min-h-[48px] transition-opacity duration-300 flex items-center justify-center">
+                            class="text-white font-bold text-xl md:text-base mb-8 px-2 min-h-[48px] transition-opacity duration-300 flex items-center justify-center">
                             zeintin Sepatu Docmart Oxford kulit sintetis
                         </p>
                         <a id="viewBtn" href="produkdetail.html?id=0"
