@@ -202,7 +202,9 @@
             <div class="flex justify-end w-full lg:w-[95%]">
                 <button
                     class="bg-transparent border border-[#F20000] text-[#F20000] bg-[#3A0000] font-bold text-xs md:text-sm px-8 md:px-12 py-3 md:py-4 tracking-widest hover:bg-[#F20000] hover:text-white transition-colors">
-                    BELI SEKARANG
+                    <a id="beli" target="_blank" href="">
+                        BELI SEKARANG
+                    </a>
                 </button>
             </div>
 
@@ -216,6 +218,7 @@
                 image2: 'assets/sepatu12.png',
                 image3: 'assets/sepatu13.png',
                 image4: 'assets/sepatu14.png',
+                link: 'https://id.shp.ee/n4tBXJN1',
                 desc: 'Zeintin Docmart Oxford merupakan sepatu pria bergaya klasik yang dirancang untuk memberikan kesan elegan dan profesional di berbagai kesempatan. Desainnya yang simpel namun berkarakter membuat sepatu ini cocok digunakan untuk bekerja di kantor, menghadiri acara formal, pertemuan bisnis, hingga melengkapi penampilan kasual yang lebih rapi. Siluetnya yang modern memberikan tampilan maskulin yang mudah dipadukan dengan berbagai jenis pakaian',
                 content1: 'Kulit sintetis premium dengan tampilan matte yang elegan, mudah dibersihka, dan memberikan kesan rapi',
                 content2: 'Lapisan dalam yang halus dan nyaman untuk membantu mengurangi gesekan saat digunakan',
@@ -227,6 +230,7 @@
                 image2: 'assets/sepatu22.png',
                 image3: 'assets/sepatu23.png',
                 image4: 'assets/sepatu24.png',
+                link: 'https://id.shp.ee/Ugn7rtBp',
                 desc: 'Sepatu Slip On Loafers bergaya Docmart ini tampil menawan dengan balutan warna full black yang elegan dan terbuat dari material kulit sintetis yang memberikan kesan premium berkelas. Seperti yang terlihat dengan jelas pada gambar, dengan desain klasik loafers ini disempurnakan dengan ornamen tassel (rumbai) yang ikonik pada bagian depan serta detail jahitan apron toe yang tegas, memadukan nuansa formal dan kasual dengan sangat apik. Dilengkapi dengan sol tebal dan kokoh bertekstur garis khas gaya Docmart, sepatu ini tidak hanya menonjolkan karakter edgy dan trendi, tetapi juga memastikan durabilitas serta pijakan yang nyaman untuk menemani aktivitas harian Anda.',
                 content1: 'Kulit sintetis premium dengan tampilan matte yang elegan, mudah dibersihkan, dan memberikan kesan rapi',
                 content2: '',
@@ -238,6 +242,7 @@
                 image2: 'assets/sepatu32.png',
                 image3: 'assets/sepatu33.png',
                 image4: 'assets/sepatu34.png',
+                link: 'https://id.shp.ee/AszcqnZv',
                 desc: 'Zeintin seri OD adalah sepatu formal pria berjenis Oxford yang digabungkan dengan desain sol tebal berkarakter (menyerupai gaya sepatu Docmart). Sepatu ini dirancang berjenis tali bersiluet klasik untuk menunjang kebutuhan aktivitas formal seperti bekerja, sekolah, maupun kegiatan resmi lainnya.',
                 content1: 'Kulit sintetis premium dengan tampilan matte yang elegan, mudah dibersihkan, dan memberikan kesan rapi',
                 content2: 'Lapisan dalam yang halus dan nyaman untuk membantu mengurangi gesekan saat digunakan',
@@ -249,6 +254,7 @@
                 image2: 'assets/sepatu42.png',
                 image3: 'assets/sepatu43.png',
                 image4: 'assets/sepatu44.png',
+                link: 'https://id.shp.ee/ocG2aUsd',
                 desc: 'Zeintin seri BJ 2205 adalah sepatu pantofel formal pria yang dirancang dengan model lace-up (bertali). Desainnya yang polos, klasik, dan minimalis menjadikan sepatu ini sangat sesuai untuk penggunaan profesional di lingkungan kerja, instansi pemerintahan, maupun untuk menghadiri acara-acara resmi.',
                 content1: 'Kulit sintetis berkualitas dengan permukaan yang halus',
                 content2: 'Lapisan dalam yang halus dan nyaman untuk membantu mengurangi gesekan saat digunakan',
@@ -260,6 +266,7 @@
                 image2: 'assets/sepatu52.png',
                 image3: 'assets/sepatu53.png',
                 image4: 'assets/sepatu54.png',
+                link: 'https://id.shp.ee/ocG2aUsd',
                 desc: 'Sepatu slip-on pria ini memadukan gaya formal nan kasual yang modern. Material premiumnya memberikan kesan mewah, sementara desain slip-on yang praktis memungkinkan pemakaian yang cepat dan mudah. Kesan rapi namun tetap effortless menjadikannya pilihan ideal untuk berbagai aktivitas harian maupun acara semi-formal.',
                 content1: 'Kulit sintetis premium dengan tampilan matte yang elegan, mudah dibersihkan, dan memberikan kesan rapi',
                 content2: 'Lapisan dalam yang halus dan nyaman untuk membantu mengurangi gesekan saat digunakan',
@@ -316,6 +323,12 @@
 
                 const content4El = document.getElementById('content4');
                 if (content4El) content4El.textContent = product.content4 || 'Karet TPR anti-slip yang kokoh dan memberikan grip optimal.';
+
+                // Update Buy Link
+                const beliBtn = document.getElementById('beli');
+                if (beliBtn) {
+                    beliBtn.href = product.link || '#';
+                }
             }
         });
 
